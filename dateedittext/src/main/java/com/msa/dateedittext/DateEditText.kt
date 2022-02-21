@@ -353,7 +353,7 @@ class DateEditText : TextInputEditText {
             if (isLeapYear(year).not()) {
                 val month = mValue.substring(3, 5).toInt()
                 val day = mValue.substring(0, 2).toInt()
-                if (month == 2 && day >= 28) {
+                if (month == 2 && day > 28) {
                     if (autoCorrect){
                         mValue = mValue.replace(day.toString(), "28", false)
                     }else{
