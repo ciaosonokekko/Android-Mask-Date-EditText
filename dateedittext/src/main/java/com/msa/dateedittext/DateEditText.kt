@@ -226,6 +226,10 @@ class DateEditText : TextInputEditText {
         addTextChangedListener(dateTextWatcher)
     }
 
+    fun removeListen() {
+        removeTextChangedListener(dateTextWatcher)
+    }
+
     /**
      * When an object of this type is attached to an Editable, its methods will be called when the text is changed. "from https://developer.android.com/reference/android/text/TextWatcher"
      * All updates and validation of text are done here
